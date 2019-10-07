@@ -1,2 +1,5 @@
 com:
   name: liming
+
+server:
+  port: 20001
