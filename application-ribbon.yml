@@ -1,0 +1,12 @@
+
+server:
+  port: 9090
+eureka:
+  client:
+    service-url:
+      defaultZone: http://bbb:10001/eureka
+spring:
+  application:
+    name: consumer-ribbon
+com:
+  name: ribbon

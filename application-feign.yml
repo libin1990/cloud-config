@@ -1,0 +1,33 @@
+server:
+  port: 9091
+spring:
+  application:
+    name: consumer-feign
+eureka:
+  client:
+    service-url:
+      defaultZone: http://bbb:10001/eureka
+feign:
+  hystrix:
+    enabled: true
+
+#hystrix的相关配置
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          #配置当前的隔离模式，THREAD 线程池隔离 SEMAPHORE 信号量隔离
+          strategy: THREAD
+        timeout:
+          # 是否开启超时时间调用
+          enabled: true
+      circuitBreaker:
+        #是否开启熔断器
+        enabled: true
+        # 熔断器打开前的失败次数
+        requestVolumeThreshold: 2
+        # 熔断器打开的持续时间，到时间后回到半开状态
+        sleepWindowInMillseconds: 5000
+com:
+  name: feign
