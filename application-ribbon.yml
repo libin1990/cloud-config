@@ -9,4 +9,4 @@ spring:
   application:
     name: consumer-ribbon
 com:
-  name: ribbon
+  name: ribbon22

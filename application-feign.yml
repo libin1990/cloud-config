@@ -30,4 +30,4 @@ hystrix:
         # 熔断器打开的持续时间，到时间后回到半开状态
         sleepWindowInMillseconds: 5000
 com:
-  name: feign
+  name: feign22
